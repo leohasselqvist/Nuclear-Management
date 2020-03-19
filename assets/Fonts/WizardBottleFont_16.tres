@@ -1,0 +1,8 @@
+[gd_resource type="DynamicFontData" format=2]
+
+[resource]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Font.ttf"
+_sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
+

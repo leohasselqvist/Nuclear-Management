@@ -1,0 +1,55 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "VR_Interactable_Rigidbody",
+"class": "VR_Colliding_Shape",
+"language": "GDScript",
+"path": "res://scripts/VR_Colliding_Shape.gd"
+}, {
+"base": "RigidBody",
+"class": "VR_Interactable_Area2D",
+"language": "GDScript",
+"path": "res://scripts/VR_Interactable_Area2D.gd"
+}, {
+"base": "RigidBody",
+"class": "VR_Interactable_Rigidbody",
+"language": "GDScript",
+"path": "res://scripts/VR_Interactable_Rigidbody.gd"
+} ]
+_global_script_class_icons={
+"VR_Colliding_Shape": "",
+"VR_Interactable_Area2D": "",
+"VR_Interactable_Rigidbody": ""
+}
+
+[application]
+
+config/name="Nuclear Management"
+run/main_scene="res://root_scenes/MainReactorControl.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+utils="*res://scripts/utils.gd"
+audio_player="*res://scenes/Other/audio_player.tscn"
+
+[gdnative]
+
+singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib" ]
+
+[physics]
+
+common/physics_fps=120
+
+[rendering]
+
+quality/shadow_atlas/quadrant_0_subdiv=2
+environment/default_environment="res://default_env.tres"
